@@ -1,0 +1,13 @@
+################Автотест API в Postman##################
+
+#GET https://reqres.in/api/users/2
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("First name is Janet", function () {
+    pm.response.to.have.jsonBody("data.first_name","Janet");
+});
+
+###############Не получилось запушить коллекцию из Postman в GitHab напрямую,#########################
+###############поэтому загрузил текстовый файл с кодом и скриншот из Postman#########################
